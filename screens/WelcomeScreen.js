@@ -8,11 +8,11 @@ export default function WelcomeScreen() {
             style={styles.container}
         >
             <ImageBackground
-                source={require('../assets/background.jpg')}
+                source={require('../app/assets/background.jpg')}
                 style={styles.background}
             >
                 <Image 
-                    source={require('../assets/logo-red.png')}
+                    source={require('../app/assets/logo-red.png')}
                     style={styles.logo}
                 />
                 <Text style={styles.tagline}>
