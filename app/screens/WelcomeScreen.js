@@ -4,15 +4,12 @@ import { View, Text, StyleSheet, ImageBackground, Image, Dimensions } from 'reac
 export default function WelcomeScreen() {
 
     return (
-        <View
-            style={styles.container}
-        >
-            <ImageBackground
-                source={require('../app/assets/background.jpg')}
+        <ImageBackground
                 style={styles.background}
+                source={require('../assets/background.jpg')}
             >
                 <Image 
-                    source={require('../app/assets/logo-red.png')}
+                    source={require('../assets/logo-red.png')}
                     style={styles.logo}
                 />
                 <Text style={styles.tagline}>
@@ -24,19 +21,14 @@ export default function WelcomeScreen() {
                 <View
                     style={styles.register}
                 />
-            </ImageBackground>
-        </View>
+        </ImageBackground>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-    },
     background: {
-        resizeMode: 'cover',
         flex: 1,
+        resizeMode: 'cover',
         flexDirection: 'column',
         justifyContent: 'flex-end',
     },

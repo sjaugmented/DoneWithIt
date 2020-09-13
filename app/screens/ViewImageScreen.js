@@ -13,7 +13,7 @@ export default function ViewImageScreen() {
                 />
             </View>
             <Image 
-                source={require('../app/assets/chair.jpg')}
+                source={require('../assets/chair.jpg')}
                 style={styles.image}
             />
         </SafeAreaView>
