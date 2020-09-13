@@ -9,22 +9,32 @@ import {
   Alert, 
   SafeAreaView, 
   Button ,
-  Dimensions
+  Dimensions,
+  ImageBackground
 } from 'react-native';
+import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks' 
 
 export default function App() {
-  
+  const {landscape} = useDeviceOrientation()
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style ={{
-        backgroundColor: 'blue',
-        width: '100%',
-        height: '30%',
-        }}>
-      </View>
-      <StatusBar style="auto" />
-    </SafeAreaView>
+    <View
+      style={{
+        backgroundColor: '#fff',
+        flex: 1,
+        flexDirection: 'row', // horizontal
+        justifyContent: 'center', // primary axis
+        alignItems: 'center', // secondary axis
+        alignContent: 'center',
+        // flexWrap: 'wrap'
+      }}
+    >
+      <ImageBackground
+        source={require('./assets/background.jpg')}
+      >
+
+      </ImageBackground>
+    </View>
   );
 }
 
