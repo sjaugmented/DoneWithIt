@@ -20,10 +20,13 @@ export default function App() {
   const {landscape} = useDeviceOrientation()
 
   return (
-    <>
-      <WelcomeScreen/>
-      {/* <ViewImageScreen/> */}
-    </>
+    <View
+      style={styles.container}
+    >
+      <View> 
+
+      </View>
+    </View>
   );
 }
 
@@ -31,6 +34,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 });

@@ -8,13 +8,15 @@ export default function WelcomeScreen() {
                 style={styles.background}
                 source={require('../assets/background.jpg')}
             >
-                <Image 
-                    source={require('../assets/logo-red.png')}
-                    style={styles.logo}
-                />
-                <Text style={styles.tagline}>
-                    Sell What You Don't Need
-                </Text>
+                <View style={styles.logoContainer}>
+                    <Image 
+                        source={require('../assets/logo-red.png')}
+                        style={styles.logo}
+                    />
+                    <Text style={styles.tagline}>
+                        Sell What You Don't Need
+                    </Text>
+                </View>
                 <View
                     style={styles.loginButton}
                 />
@@ -29,20 +31,20 @@ const styles = StyleSheet.create({
     background: {
         flex: 1,
         justifyContent: 'flex-end',
+        alignItems: 'center' // same as alignSelf on a child, centers all items 
     },
     logo: {
         height: 100,
         width: 100,
         resizeMode: "contain",
+    },
+    logoContainer: {
         position: 'absolute',
-        top: 100,
-        alignSelf: 'center'
+        top: 70,
+        alignItems: 'center'
     },
     tagline: {
-        position: 'relative',
-        top: 200,
-        alignSelf: 'center',
-        position: 'absolute'
+        top: 10,
     },
     loginButton: {
         width: '100%',

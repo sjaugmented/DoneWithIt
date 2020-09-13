@@ -1,17 +1,17 @@
 import React from 'react'
 import { SafeAreaView, View, Text, StyleSheet, Image} from 'react-native'
 
+import colors from '../config/colors'
+
 export default function ViewImageScreen() {
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.topbar}>
-                <View 
-                    style={styles.close}
+            <View 
+                    style={styles.closeIcon}
                 />
-                <View 
-                    style={styles.delete}
+            <View 
+                style={styles.deleteIcon}
                 />
-            </View>
             <Image 
                 source={require('../assets/chair.jpg')}
                 style={styles.image}
@@ -21,29 +21,29 @@ export default function ViewImageScreen() {
 }
 
 const styles = StyleSheet.create({
+    closeIcon: {
+        width: 50,
+        height: 50,
+        backgroundColor: colors.primary,
+        top: 40,
+        left: 30,
+        position: 'absolute',
+    },
+    deleteIcon: {
+        width: 50,
+        height: 50,
+        backgroundColor: colors.secondary,
+        position: 'absolute',
+        top: 40,
+        right: 30,
+    },
     container: {
         flex: 1,
-        backgroundColor: 'black',
-    },
-    topbar: {
-        flex: 1,
-        justifyContent: 'center',
-    },
-    close: {
-        width: 100,
-        height: 100,
-        backgroundColor: '#fc5c65',
-        left: '5%'
-    },
-    delete: {
-        width: 100,
-        height: 100,
-        backgroundColor: '#4ECDC4',
-        left: '70%'
+        backgroundColor: colors.black,
     },
     image: {
         width: '100%',
         height: '100%',
         resizeMode: 'contain',
-    }
+    },
 })
