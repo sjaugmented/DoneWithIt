@@ -16,10 +16,10 @@ export default function WelcomeScreen() {
                     Sell What You Don't Need
                 </Text>
                 <View
-                    style={styles.login}
+                    style={styles.loginButton}
                 />
                 <View
-                    style={styles.register}
+                    style={styles.registerButton}
                 />
         </ImageBackground>
     )
@@ -28,8 +28,6 @@ export default function WelcomeScreen() {
 const styles = StyleSheet.create({
     background: {
         flex: 1,
-        resizeMode: 'cover',
-        flexDirection: 'column',
         justifyContent: 'flex-end',
     },
     logo: {
@@ -42,15 +40,18 @@ const styles = StyleSheet.create({
     },
     tagline: {
         position: 'relative',
-        top: 100,
-        alignSelf: 'center'
+        top: 200,
+        alignSelf: 'center',
+        position: 'absolute'
     },
-    login: {
-        height: '8%',
+    loginButton: {
+        width: '100%',
+        height: 70,
         backgroundColor: '#fc5c65'
     },
-    register: {
-        height: '8%',
+    registerButton: {
+        width: '100%',
+        height: 70,
         backgroundColor: '#4ECDC4'
     }
   });
