@@ -28,8 +28,8 @@ export default function AccountScreen() {
     <Screen style={styles.screen}>
       <View style={styles.container}>
         <ListItem
-          title="Seth Johnson"
-          subtitle="sjaugmented@gmail.com"
+          title="Mosh"
+          subtitle="dr.awesome@gmail.com"
           image={require("../assets/mosh.jpg")}
         />
       </View>
