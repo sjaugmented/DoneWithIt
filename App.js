@@ -15,6 +15,8 @@ import {
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks' 
 import WelcomeScreen from './app/screens/WelcomeScreen'
 import ViewImageScreen from './app/screens/ViewImageScreen'
+import AppText from './app/components/AppText'
+import {} from '@expo/vector-icons'
 
 export default function App() {
   const {landscape} = useDeviceOrientation()
@@ -23,16 +25,17 @@ export default function App() {
     <View
       style={styles.container}
     >
-      <View
+      <AppText
         style={{
-          backgroundColor: '',
-          width: 100,
-          height: 100,
-          
+          fontSize: 30,
+          fontFamily: 'Avenir Next',
+          fontWeight: '600',
+          color: 'tomato',
+          textTransform: "capitalize",
+          textAlign: 'center',
         }}
-      > 
+      >I love React Native!</AppText>
 
-      </View>
     </View>
   );
 }
