@@ -11,7 +11,6 @@ import AppText from './app/components/AppText'
 import AppButton from './app/components/AppButton'
 import {} from '@expo/vector-icons'
 
-import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 export default function App() {
   const {landscape} = useDeviceOrientation()
