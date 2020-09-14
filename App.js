@@ -8,14 +8,15 @@ import {
   Image, 
   Alert, 
   SafeAreaView, 
-  Button ,
   Dimensions,
-  ImageBackground
+  ImageBackground,
+  Button
 } from 'react-native';
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks' 
 import WelcomeScreen from './app/screens/WelcomeScreen'
 import ViewImageScreen from './app/screens/ViewImageScreen'
 import AppText from './app/components/AppText'
+import RoundedButton from './app/components/RoundedButton'
 import {} from '@expo/vector-icons'
 
 export default function App() {
@@ -25,17 +26,9 @@ export default function App() {
     <View
       style={styles.container}
     >
-      <AppText
-        style={{
-          fontSize: 30,
-          fontFamily: 'Avenir Next',
-          fontWeight: '600',
-          color: 'tomato',
-          textTransform: "capitalize",
-          textAlign: 'center',
-        }}
-      >I love React Native!</AppText>
-
+    <RoundedButton 
+      title='Login'
+    />
     </View>
   );
 }
