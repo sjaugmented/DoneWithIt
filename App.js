@@ -7,8 +7,6 @@ import {
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks' 
 import WelcomeScreen from './app/screens/WelcomeScreen'
 import ViewImageScreen from './app/screens/ViewImageScreen'
-import AppText from './app/components/AppText'
-import AppButton from './app/components/AppButton'
 import {} from '@expo/vector-icons'
 
 

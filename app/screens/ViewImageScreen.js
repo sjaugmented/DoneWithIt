@@ -7,7 +7,7 @@ export default function ViewImageScreen() {
     return (
         <SafeAreaView style={styles.container}>
             <View 
-                    style={styles.closeIcon}
+                style={styles.closeIcon}
                 />
             <View 
                 style={styles.deleteIcon}

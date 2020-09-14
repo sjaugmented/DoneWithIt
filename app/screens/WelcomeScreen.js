@@ -28,12 +28,14 @@ export default function WelcomeScreen() {
                     <AppButton 
                         title="Login"
                         color={colors.primary}
+                        onPress={() => console.log('login!')}
                     />
                 </View>
                 <View style={styles.registerButton}>
                     <AppButton 
                         title="Register"
                         color={colors.secondary}
+                        onPress={() => console.log('register!')}
                     />
                 </View>
                 
