@@ -1,17 +1,17 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
-
 import AppText from './AppText'
+
 import colors from '../config/colors'
 
-export default function Card({title, subtitle, image}) {
+export default function ListItem({title, subtitle, image}) {
     return (
-        <View style={styles.card}>
+        <View style={styles.container}>
             <Image 
-                style={styles.image}
                 source={image}
+                style={styles.image}
             />
-            <View style={styles.detailsContainer}>
+            <View>
                 <AppText style={styles.title}>{title}</AppText>
                 <AppText style={styles.subtitle}>{subtitle}</AppText>
             </View>
@@ -20,24 +20,19 @@ export default function Card({title, subtitle, image}) {
 }
 
 const styles = StyleSheet.create({
-    card: {
-        borderRadius: 20,
-        backgroundColor: colors.white,
-        marginBottom: 20,
-        overflow: 'hidden',
+    container: {
+        flexDirection: 'row'
     },
     image: {
-        width: '100%',
-        height: 200,
-    },
-    detailsContainer: {
-        padding: 20,
+        width: 70,
+        height: 70,
+        borderRadius: 35,
+        marginRight: 10
     },
     title: {
-        marginBottom: 7
+        fontWeight: '500',
     },
     subtitle: {
-        color: colors.secondary,
-        fontWeight: 'bold',
-    },
+        color: colors.medium,
+    }
 })
