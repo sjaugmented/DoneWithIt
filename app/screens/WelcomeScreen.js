@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, ImageBackground, Image, Dimensions } from 'react-native'
+import AppButton from '../components/AppButton'
 
 export default function WelcomeScreen() {
 
@@ -17,8 +18,9 @@ export default function WelcomeScreen() {
                         Sell What You Don't Need
                     </Text>
                 </View>
-                <View
-                    style={styles.loginButton}
+                <AppButton 
+                    title="Login"
+                    color
                 />
                 <View
                     style={styles.registerButton}

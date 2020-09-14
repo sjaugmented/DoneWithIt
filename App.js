@@ -8,20 +8,16 @@ import { useDimensions, useDeviceOrientation } from '@react-native-community/hoo
 import WelcomeScreen from './app/screens/WelcomeScreen'
 import ViewImageScreen from './app/screens/ViewImageScreen'
 import AppText from './app/components/AppText'
-import Button from './app/components/Button'
+import AppButton from './app/components/AppButton'
 import {} from '@expo/vector-icons'
+
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 export default function App() {
   const {landscape} = useDeviceOrientation()
 
   return (
-    <View
-      style={styles.container}
-    >
-    <Button 
-      title='Login'
-    />
-    </View>
+    <WelcomeScreen />
   );
 }
 
