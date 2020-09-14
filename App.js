@@ -23,7 +23,14 @@ export default function App() {
     <View
       style={styles.container}
     >
-      <View> 
+      <View
+        style={{
+          backgroundColor: '',
+          width: 100,
+          height: 100,
+          
+        }}
+      > 
 
       </View>
     </View>
