@@ -2,21 +2,13 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { 
   StyleSheet,
-  Text, 
-  TouchableHighlight, 
   View, 
-  Image, 
-  Alert, 
-  SafeAreaView, 
-  Dimensions,
-  ImageBackground,
-  Button
 } from 'react-native';
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks' 
 import WelcomeScreen from './app/screens/WelcomeScreen'
 import ViewImageScreen from './app/screens/ViewImageScreen'
 import AppText from './app/components/AppText'
-import RoundedButton from './app/components/RoundedButton'
+import Button from './app/components/Button'
 import {} from '@expo/vector-icons'
 
 export default function App() {
@@ -26,7 +18,7 @@ export default function App() {
     <View
       style={styles.container}
     >
-    <RoundedButton 
+    <Button 
       title='Login'
     />
     </View>
