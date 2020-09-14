@@ -1,38 +1,53 @@
-import React from 'react'
-import { View, Text, StyleSheet, Image } from 'react-native'
-import AppText from './AppText'
+import React from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableHighlight,
+} from "react-native";
+import AppText from "./AppText";
+import Swipeable from "react-native-gesture-handler/Swipeable";
 
-import colors from '../config/colors'
+import colors from "../config/colors";
 
-export default function ListItem({title, subtitle, image}) {
-    return (
+export default function ListItem({
+  title,
+  subtitle,
+  image,
+  onPress,
+  renderRightActions,
+}) {
+  return (
+    <Swipeable renderRightActions={renderRightActions}>
+      <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
         <View style={styles.container}>
-            <Image 
-                source={image}
-                style={styles.image}
-            />
-            <View>
-                <AppText style={styles.title}>{title}</AppText>
-                <AppText style={styles.subtitle}>{subtitle}</AppText>
-            </View>
+          <Image source={image} style={styles.image} />
+          <View>
+            <AppText style={styles.title}>{title}</AppText>
+            <AppText style={styles.subtitle}>{subtitle}</AppText>
+          </View>
         </View>
-    )
+      </TouchableHighlight>
+    </Swipeable>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flexDirection: 'row'
-    },
-    image: {
-        width: 70,
-        height: 70,
-        borderRadius: 35,
-        marginRight: 10
-    },
-    title: {
-        fontWeight: '500',
-    },
-    subtitle: {
-        color: colors.medium,
-    }
-})
+  container: {
+    flexDirection: "row",
+    padding: 15,
+  },
+  image: {
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    marginRight: 10,
+  },
+  title: {
+    fontWeight: "500",
+  },
+  subtitle: {
+    color: colors.medium,
+  },
+});
